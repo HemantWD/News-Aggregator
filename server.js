@@ -4,6 +4,8 @@ import cors from "cors";
 import connectDB from "./config/db.js";
 import newsRoutes from "./routes/newsRoutes.js";
 import newsFilterRoutes from "./routes/newsFilterRoutes.js";
+import { fileURLToPath } from "url";
+import path from "path";
 
 // config env
 dotenv.config();
@@ -19,18 +21,23 @@ app.use(cors());
 app.use(express.json());
 
 // routes
-
 app.use("/api", newsRoutes);
 app.use("/api", newsFilterRoutes);
 
-// RESR API
-app.use("/", (req, res) => {
-  res.send("<h1>Welcome to News Api App</h1>");
+// Get the directory name using fileURLToPath and __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static files (like your HTML file)
+app.use(express.static(path.join(__dirname)));
+
+// REST API
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // PORT
-
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);

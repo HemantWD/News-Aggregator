@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>News Appgregator API</title>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex items-center justify-center my-6">
+      <h1 class="text-indigo-600 text-3xl font-bold">News API</h1>
+    </div>
+    <div class="flex items-center justify-center">
+      <div class="bg-white p-8 rounded-lg shadow-md w-full items-center">
+        <h1 class="text-2xl font-semibold mb-4 text-indigo-600">
+          News Appgregator API
+        </h1>
+        <ul class="list-disc pl-4 space-y-4">
+          <li class="mb-2">
+            <p class="text-gray-700">
+              <span class="font-bold text-indigo-600">METHOD:</span> POST
+              <br />
+              <span class="font-bold text-indigo-600">Description:</span> Post
+              request to fetch API data and store in the database.
+            </p>
+            <p class="">
+              <span class="font-bold text-indigo-600">API:</span>
+              <code class="text-blue-500">http://localhost:5500/api/news</code>
+            </p>
+          </li>
+          <li class="mb-4">
+            <p class="text-gray-700">
+              <span class="font-bold text-indigo-600">METHOD:</span> POST
+              <br />
+              <span class="font-bold text-indigo-600">Description:</span> POST
+              request to create a single article.
+            </p>
+            <p class="">
+              <span class="font-bold text-indigo-600">API:</span>
+              <code class="text-blue-500"
+                >http://localhost:5500/api/new-news</code
+              >
+            </p>
+          </li>
+          <li class="mb-4">
+            <p class="text-gray-700">
+              <span class="font-bold text-indigo-600">METHOD:</span> GET
+              <br />
+              <span class="font-bold text-indigo-600">Description:</span> Get
+              request for getting a single article.
+            </p>
+            <p class="">
+              <span class="font-bold text-indigo-600">API:</span>
+              <code class="text-blue-500"
+                >http://localhost:5500/api/news/:id</code
+              >
+            </p>
+          </li>
+          <li class="mb-4">
+            <p class="text-gray-700">
+              <span class="font-bold text-indigo-600">METHOD:</span> PUT
+              <br />
+              <span class="font-bold text-indigo-600">Description:</span> PUT
+              request to update a news article.
+            </p>
+            <p class="">
+              <span class="font-bold text-indigo-600">API:</span>
+              <code class="text-blue-500"
+                >http://localhost:5500/api/news/:id</code
+              >
+            </p>
+          </li>
+          <li class="mb-4">
+            <p class="text-gray-700">
+              <span class="font-bold text-indigo-600">METHOD:</span> DELETE
+              <br />
+              <span class="font-bold text-indigo-600">Description:</span> Delete
+              request for deleting an article.
+            </p>
+            <p class="">
+              <span class="font-bold text-indigo-600">API:</span>
+              <code class="text-blue-500"
+                >http://localhost:5500/api/news/"id</code
+              >
+            </p>
+          </li>
+          <li class="mb-4">
+            <p class="text-gray-700">
+              <span class="font-bold text-indigo-600">METHOD:</span> GET
+              <br />
+              <span class="font-bold text-indigo-600">Description:</span>
+              Request for filtering news based on category.
+            </p>
+            <p class="">
+              <span class="font-bold text-indigo-600">API:</span>
+              <code class="text-blue-500"
+                >http://localhost:5500/api/filter</code
+              >
+            </p>
+          </li>
+          <li>
+            <p class="text-gray-700">
+              <span class="font-bold text-indigo-600">METHOD:</span> GET
+              <br />
+              <span class="font-bold text-indigo-600">Description:</span> Get
+              request for searching with a keyword.
+            </p>
+            <p class="">
+              <span class="font-bold text-indigo-600">API:</span>
+              <code class="text-blue-500"
+                >http://localhost:5500/api/search</code
+              >
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
